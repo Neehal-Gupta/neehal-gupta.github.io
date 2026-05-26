@@ -2,31 +2,44 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
     <title>Neehal Raj Gupta — Portfolio</title>
 
+    <!-- Theme preload -->
     <script>
       (function () {
         try {
-          const saved = localStorage.getItem('theme');
-          if (saved === 'dark') {
-            document.documentElement.classList.add('dark');
-          } else if (saved === 'light') {
-            document.documentElement.classList.remove('dark');
+          const saved = localStorage.getItem("theme");
+
+          if (saved === "dark") {
+            document.documentElement.classList.add("dark");
+          } else if (saved === "light") {
+            document.documentElement.classList.remove("dark");
           } else {
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (prefersDark) document.documentElement.classList.add('dark');
+            const prefersDark = window.matchMedia(
+              "(prefers-color-scheme: dark)"
+            ).matches;
+
+            if (prefersDark) {
+              document.documentElement.classList.add("dark");
+            }
           }
         } catch (e) {}
       })();
     </script>
 
-    <!-- ✅ Vite dev entry -->
+    <!-- Vite dev entry -->
     <script type="module" crossorigin src="/assets/index-Cu5b9b4W.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-IS77bXph.css">
   </head>
 
-  <body class="antialiased bg-gray-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors">
+  <body
+    class="antialiased bg-gray-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors"
+  >
     <div id="root"></div>
   </body>
 </html>
